@@ -73,14 +73,32 @@ nav {
 
 /* Сверху контакты */
 
-.school_schedule_text {
-    margin: 25px auto;
-    text-align: center;
-    width: 50%;
+.school_schedule_list {
     color: var(--main-color-for-words);
-    font-size: 24px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
 }
 
+.school_schedule_list_text {
+    display: list-item;
+    list-style-type: disc;
+    padding: 1px 0px;
+    margin: 0px auto;
+    color: var(--main-color-for-words);
+    font-size: 24px;
+    text-align: center;
+}
+
+.global_sclt {
+    display: list-item;
+    list-style-type: circle;
+    padding: 1px 0px;
+    margin: 0px auto;
+    color: var(--main-color-for-words);
+    font-size: 24px;
+    text-align: center;
+}
 
 @media (max-width: 1000px) {
     .t3 {
@@ -94,6 +112,7 @@ nav {
     
     .school_contacts_container {
         width: 90%;
+        flex-direction: column;
     }
 
     .school_contacts_1,
