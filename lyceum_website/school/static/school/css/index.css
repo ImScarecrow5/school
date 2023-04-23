@@ -50,7 +50,7 @@ li a h1 {
 
 nav {
     background-color: var(--nav-bg-color);
-    width: 100vw;
+    width: 100%;
 }
 
 /* Сверху нав */
@@ -69,8 +69,8 @@ nav {
 /* Сверху фото школы */
 
 .why_are_we_container {
-    background-image: url('./image/question.png');
-    background-size: cover;
+    /* background-image: url('./question.png');
+    background-size: cover; */
     max-width: 100%;    
 }
 

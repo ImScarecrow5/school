@@ -50,7 +50,7 @@ li a h1 {
 
 nav {
     background-color: var(--nav-bg-color);
-    width: 100vw;
+    width: 100%;
 }
 
 /* Сверху нав */
