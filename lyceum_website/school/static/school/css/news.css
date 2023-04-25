@@ -55,6 +55,10 @@ nav {
 
 /* Сверху нав */
 
+.post_container {
+    margin: 0px 5px;
+}
+
 .post_li {
     list-style-type: none;
     height: min-content;
@@ -111,7 +115,7 @@ nav {
 
 @media (max-width: 550px) {
     .nav_li  a h1 {
-        font-size: x-small !important;
+        font-size: xx-small !important;
     }
 
     .nav_li img {

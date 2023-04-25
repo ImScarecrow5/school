@@ -189,7 +189,7 @@ footer h1 {
 
 @media (max-width: 550px) {
     a h1 {
-        font-size: x-small !important;
+        font-size: xx-small !important;
     }
     li img {
         margin: 0px 0px 0px 10px;

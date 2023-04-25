@@ -69,7 +69,7 @@ nav {
     text-align: center;
     width: 80%;
     margin: 25px auto;
-    padding: 0px 15px;
+    padding: 0px 10px;
 }
 
 /* Сверху контакты */
@@ -79,6 +79,7 @@ nav {
     display: flex;
     align-items: start;
     flex-direction: column;
+    margin: 0px 27px;
 }
 
 .school_schedule_list_text {
@@ -122,18 +123,13 @@ nav {
         font-size: 16px;
     }
 
-    .school_schedule_text {
-        font-size: 16px;
-        width: 70%;
-    }
-
     /* Сверху нав */
 
 }
 
 @media (max-width: 550px) {
     a h1 {
-        font-size: x-small !important;
+        font-size: xx-small !important;
     }
     li img {
         margin: 0px 0px 0px 10px;
