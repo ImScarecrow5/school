@@ -15,20 +15,23 @@
             <li class="nav_li"><a class="t1 nav-text" href="{% url 'home' %}"><h1 class="nav_text">Главная</h1></li></a>
             <li class="nav_li"><a class="t2 nav-text" href="{% url 'news' %}"><h1 class="nav_text">Новости</h1></li></a>
             <li class="nav_li"><a class="t3 nav-text" href="{% url 'contacts' %}"><h1 class="nav_text">Контакты</h1></li></a>
-            <li class="nav_li"><a class="t4 nav-text" href="{% url 'sign-in' %}"><h1 class="nav_text">Вход</h1></li></a>
+            <li class="nav_li"><a class="t4 nav-text" href="{% url 'feedback' %}"><h1 class="nav_text">Обращение</h1></li></a>
         </ul>
     </nav>
     <div class="post_container">
         <ul class="post_ul">
             {% for i in posts %}
-            <li class="post_li">
-                <h1 class="post_time">{{i.time}}</h1>
-                <img src="{{i.photo.url}}" alt="" class="post_photo">
-                <div class="post_text">
-                <a class="post_link" href="{{i.get_absolute_url}}"><h1 class="post_li_h1">{{i.title}}</h1></a>
-                <h1 class="post_content">{{i.content|truncatewords:15}}</h1>
-                </div>
-            </li>
+            {% if i.is_publised %}
+                <li class="post_li">
+                    <h1 class="post_time">{{i.time}}</h1>
+                    <img src="{{i.photo.url}}" alt="" class="post_photo">
+                    <div class="post_text">
+                        <a class="post_link" href="{{i.get_absolute_url}}"><h1 class="post_li_h1">{{i.title}}</h1></a>
+                        <h1 class="post_content">{{i.content|truncatewords:15}}</h1>
+                    </div>
+                </li>
+                <br>
+            {% endif %}
             {% endfor %}
         </ul>
     </div>

@@ -73,7 +73,7 @@ label {
     font-size: 24px;
 }
 
-input {
+input, textarea {
     font-family: Roboto Slab;
     border-radius: 3px;
     border: none;
@@ -84,7 +84,10 @@ input {
 
 input:active,
 input:hover,
-input:focus {
+input:focus,
+textarea:active,
+textarea:hover,
+textarea:focus {
     outline: 0;
     outline-offset: 0;
 }
@@ -111,6 +114,10 @@ form button {
 
 form button:hover {
     transform: scale(1.2);
+}
+
+form h1 {
+    text-align: center;
 }
 
 @media (max-width: 1000px) {

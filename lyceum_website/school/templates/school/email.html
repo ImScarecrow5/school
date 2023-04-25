@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'school/css/email.css' %}">
+    <title>Вход</title>
+</head>
+<body>
+    <body>
+        <nav class="headear-container">
+            <ul class="nav_ul">
+                <li class="nav_li"><img src="{% static 'school/images/Logo.svg' %}" alt=""></li>
+                <li class="nav_li"><a class="t1 nav-text" href="{% url 'home' %}"><h1 class="nav_text">Главная</h1></li></a>
+                <li class="nav_li"><a class="t2 nav-text" href="{% url 'news' %}"><h1 class="nav_text">Новости</h1></li></a>
+                <li class="nav_li"><a class="t3 nav-text" href="{% url 'contacts' %}"><h1 class="nav_text">Контакты</h1></li></a>
+                <li class="nav_li"><a class="t4 nav-text" href="{% url 'feedback' %}"><h1 class="nav_text">Обращение</h1></li></a>
+            </ul>
+        </nav>
+        <form method="POST" action="">
+            {% csrf_token %}
+            {% if success %}
+                <h1>Спасибо за сообщение!</h1>
+            {% else %}
+                <h1>Обращение к директору</h1>
+            {% endif %}
+            <label for="user_email" class="email_label">Почта:</label>
+            {{form.email}}
+            <label for="user_password" class="name_label">Имя:</label>
+            {{form.name}}
+            <label for="user_password" class="message_label">Сообщение:</label>
+            {{form.message}}
+            <button type="submit">Потвердить</button>
+        </form>
+</body>
+</html>
