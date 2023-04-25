@@ -17,9 +17,13 @@ def sign_in(request):
 def sign_up(request):
     return render(request, 'school/sign-up.html')
 
-def test(request):
+def news(request):
     posts = School.objects.all()
-    return render(request, 'school/test.html', {'posts': posts})
+    return render(request, 'school/news.html', {'posts': posts})
+
+def show_post(request, post_id):
+    posts = School.objects.get(pk = post_id)
+    return render(request, 'school/post.html', {'posts': posts})
 
 def pageNotFound(request, exception):
     return HttpResponseNotFound('<h1>Страница не найдена</h1>')

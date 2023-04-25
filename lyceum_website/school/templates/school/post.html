@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'school/css/post.css' %}">
+    <title>Новости</title>
+</head>
+<body>
+    <nav class="headear-container">
+        <ul class="nav_ul">
+            <li class="nav_li"><img src="{% static 'school/images/Logo.svg' %}" alt=""></li>
+            <li class="nav_li"><a class="t1 nav-text" href="{% url 'home' %}"><h1 class="nav_text">Главная</h1></li></a>
+            <li class="nav_li"><a class="t2 nav-text" href="{% url 'news' %}"><h1 class="nav_text">Новости</h1></li></a>
+            <li class="nav_li"><a class="t3 nav-text" href="{% url 'contacts' %}"><h1 class="nav_text">Контакты</h1></li></a>
+            <li class="nav_li"><a class="t4 nav-text" href="{% url 'sign-in' %}"><h1 class="nav_text">Вход</h1></li></a>
+        </ul>
+    </nav>
+    <a class="go_back" href="{% url 'news' %}">Назад</a>
+    <h1 class="post_content">{{posts.content}}</h1>
+    <img src="{{posts.photo.url}}" alt="" class="post_photo">
+</body>
+</html>
