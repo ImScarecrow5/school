@@ -9,9 +9,6 @@ from django.core.mail import send_mail, BadHeaderError, EmailMultiAlternatives
 
 from .models import *
 
-def sch(request):
-    return HttpResponse('Страница приложения school')
-
 def index(request):
     return render(request, 'school/index.html')
 
