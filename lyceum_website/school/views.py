@@ -7,7 +7,7 @@ from .forms import SchoolForm
 from lyceum_website.settings import EMAIL_SERVER, EMAIL_ADMIN
 from django.core.mail import send_mail, BadHeaderError, EmailMultiAlternatives
 
-from .models import *
+from .models import *   
 
 def index(request):
     return render(request, 'school/index.html')
@@ -43,7 +43,6 @@ def feedback(request):
 
 def send_message(name, email, message):
     text = get_template('school/message_feedback.html')
-    text_html = get_template('school/message_feedback.html')
     context = {'name': name, 'email': email, 'message': message}
     subject = 'Письмо от пользователя'
     text_content = text.render(context)
