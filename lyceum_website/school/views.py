@@ -47,6 +47,3 @@ def send_message(name, email, message):
     subject = 'Письмо от пользователя'
     text_content = text.render(context)
     send_mail(subject, text_content, EMAIL_SERVER, EMAIL_ADMIN)
-
-def pageNotFound(request, exception):
-    return HttpResponseNotFound('<h1>Страница не найдена</h1>')
