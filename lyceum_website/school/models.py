@@ -6,7 +6,7 @@ class School(models.Model):
     content = models.TextField(blank=True)
     photo = models.ImageField(upload_to="photo/%Y/%m/%d/")
     time = models.DateTimeField(auto_now_add=True, verbose_name='Время создания')
-    is_publised = models.BooleanField(default=True)
+    is_publised = models.BooleanField(default=True, verbose_name='Опубликовано')
 
     def __str__(self):
         return self.title
